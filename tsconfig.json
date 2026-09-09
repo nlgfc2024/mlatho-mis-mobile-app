@@ -1,0 +1,33 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
+    "paths": {
+      "@/*": ["./*"],
+      // "@/*": ["src/*"],
+      "@/db/*": ["src/db/*"],
+      "@/src/*": ["src/*"]
+    },
+    "plugins": [
+      {
+        "name": "@0no-co/graphqlsp",
+        "schema": "./schema.graphql"
+      }
+    ]
+  },
+  "jsx": "react-jsx",
+  "allowJs": true,
+  "skipLibCheck": true,
+  "esModuleInterop": true,
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "src/sync/sync-village-groups.ts"
+  ]
+}

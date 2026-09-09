@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "uniwind";
+
+/*
+ * Theme-aware press/focus backgrounds for list rows.
+ *
+ * Stacking `dark:` with a state variant (e.g. `dark:focus:bg-gray-900`) does
+ * not resolve the dark gate correctly in this Uniwind version — the dark color
+ * leaks into light mode. `light-dark()` picks the right value per theme without
+ * a `dark:` variant, so use these under `focus:`/`active:` instead.
+ */
+@utility bg-pressed {
+  background-color: light-dark(var(--color-gray-50), var(--color-gray-900));
+}
+@utility bg-pressed-strong {
+  background-color: light-dark(var(--color-gray-100), var(--color-gray-700));
+}
+@utility bg-pressed-control {
+  background-color: light-dark(var(--color-gray-200), var(--color-gray-700));
+}
