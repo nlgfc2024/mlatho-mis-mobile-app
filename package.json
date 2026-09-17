@@ -4,6 +4,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "dev:eas": "npx expo start --dev-client",
     "start": "npx expo start",
     "android": "npx expo run:android",
     "ios": "npx expo run:ios",
